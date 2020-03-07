@@ -7,7 +7,13 @@ j() {(
     buildDirectory=".build"
     shaFileExtention=".shasum"
 
-    javaFiles=( $(echo *.java **/*.java) )
+    if [ -n "$ZSH_VERSION" ]; then;
+        # zsh inclues *.java files in **/*.java
+        javaFiles=( $(echo **/*.java) )
+    else
+        javaFiles=( $(echo *.java **/*.java) )
+    fi
+
     toBeCompiled=()
 
     hashedFilesNames=()
@@ -43,10 +49,18 @@ j() {(
 
         # Update .shasum files
 
-        for i in "${!hashedFilesNames[@]}"
-        do
-            echo ${hashedFilesHashes[i]} > $buildDirectory/${hashedFilesNames[i]}$shaFileExtention
-        done
+        if [ -n "$ZSH_VERSION" ]; then;
+            # zsh is done differently
+            for i in $(seq 1 ${#hashedFilesHashes[@]})
+            do
+                echo $hashedFilesHashes[$i] > $buildDirectory/$hashedFilesNames[$i]$shaFileExtention
+            done
+        else
+            for i in "${!hashedFilesNames[@]}"
+            do
+                echo ${hashedFilesHashes[i]} > $buildDirectory/${hashedFilesNames[i]}$shaFileExtention
+            done
+        fi
     fi
 
 
@@ -116,7 +130,8 @@ _jOccasionalTesting_compile() {
 
     while :
     do
-        read -p "$ " command
+        printf "$ "
+        read command
 
         if [ "$command" = "javac SomeClass.java" ]; then
             echo "You're right!"
@@ -138,7 +153,8 @@ _jOccasionalTesting_run() {
 
     while :
     do
-        read -p "$ " command
+        printf "$ "
+        read command
 
         if [ "$command" = "java SomeClass" ]; then
             echo "You're right!"
