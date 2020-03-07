@@ -8,6 +8,7 @@ Things I've made so I can be lazier
 
   - [j](./j)
     - Compile and run .java files
+    - Make sure you remember `javac` and `java` commands, even if you don't use those after switching
 
 ## Lessons
 
