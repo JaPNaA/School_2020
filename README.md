@@ -2,6 +2,13 @@
 
 school, um, stuff. in 2020.
 
+## Utilities
+
+Things I've made so I can be lazier
+
+  - [j](./j)
+    - Compile and run .java files
+
 ## Lessons
 
   - Module 1 Java Introduction: [hello](./hello)
