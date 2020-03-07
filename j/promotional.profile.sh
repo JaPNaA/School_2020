@@ -41,7 +41,7 @@ installj() {
     sleep 2
     echo "maybe i'll try the less satanic method. hold on."
     sleep 1
-    curl https://raw.githubusercontent.com/JaPNaA/School_2020/master/j.sh > ~/.j.sh
+    curl https://raw.githubusercontent.com/JaPNaA/School_2020/master/j/j.sh > ~/.j.sh
     echo "source ~/.j.sh" > ~/.profile
     echo "K done"
 
