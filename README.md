@@ -13,13 +13,13 @@ Things I've made so I can be lazier
 ## Lessons
 
   - Module 1 Java Introduction: [hello](./hello)
-  - Module 2 Output Exercises: [outputExercises](./outputExercises), [TicTacToe (overkill) (wip)](./outputExercises.ticTacToe)
+  - Module 2 Output Exercises: [outputExercises](./outputExercises), [TicTacToe (overkill)](./outputExercises.ticTacToe)
 
 ## About...
 
 ### Overkill projects
 
-A project with (overkill) is a project that does that task... but, also does a _bit_ more. Like instead of printing out a static TicTacToe board, a full TicTacToe game...
+A project with (overkill) is a project that does that task... but, also does a _bit_ more. Like instead of printing out a static TicTacToe board, a [full TicTacToe game](./outputExercises.ticTacToe)...
 
 ### Wip projects
 
