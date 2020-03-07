@@ -24,7 +24,6 @@ j() {(
     for javaFile in "${javaFiles[@]}"
     do
         [ -f "$javaFile" ] || continue
-        echo $javaFile
 
         shaSum=$(sha256sum $javaFile | cut -d " " -f 1)
         oldShaSum="$(cat "$buildDirectory/$javaFile$shaFileExtention" 2>/dev/null || echo "")"
