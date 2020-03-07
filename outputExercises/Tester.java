@@ -1,3 +1,10 @@
+/**
+ * Written by JaPNaA
+ * March 6
+ *
+ * This is also in a git repo, so this comment is completely unnessassary
+ */
+
 class Tester {
     public static void main(String[] args) {
         System.out.println(
