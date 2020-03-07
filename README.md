@@ -13,7 +13,10 @@ Things I've made so I can be lazier
 ## Lessons
 
   - Module 1 Java Introduction: [hello](./hello)
-  - Module 2 Output Exercises: [outputExercises](./outputExercises), [TicTacToe (overkill)](./outputExercises.ticTacToe)
+  - Module 2 Output Exercises: [outputExercises](./outputExercises)
+    - [TicTacToe (overkill)](./outputExercises.ticTacToe)
+    - [NLStandings](./outputExercises/NLStandings.java)
+    - [BoxOffice](./outputExercises/BoxOffice.java)
 
 ## About...
 
