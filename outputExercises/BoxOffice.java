@@ -1,6 +1,6 @@
 class BoxOffice {
     public static void main(String[] args) {
-        System.out.println(" ".repeat(30) + "TOP WEEKEND BOX OFFICE");
+        System.out.println(" ".repeat(20) + "TOP WEEKEND BOX OFFICE");
 
         printRow("RANK", "TITLE", "GROSS");
         printRow("1", "Contagion", "22.4 M");
