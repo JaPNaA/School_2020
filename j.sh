@@ -13,6 +13,9 @@ j() {(
     hashedFilesNames=()
     hashedFilesHashes=()
 
+
+    # Loop through java files, filter for changed files using .shasum files
+
     for javaFile in $javaFiles
     do
         # [ -f "$javaFile" ] || continue
@@ -28,6 +31,8 @@ j() {(
     done
 
 
+    # Compile
+
     if [ ${#toBeCompiled[@]} -eq 0 ]; then
         echo "No files to compile"
     else
@@ -36,11 +41,16 @@ j() {(
         echo Compiling changed files: $toBeCompiled...
         javac $toBeCompiled -d .build
 
+        # Update .shasum files
+
         for i in "${!hashedFilesNames[@]}"
         do
             echo ${hashedFilesHashes[i]} > $buildDirectory/${hashedFilesNames[i]}$shaFileExtention
         done
     fi
+
+
+    # Run, if compile successful
 
     if [ $? -eq 0 ]; then
 
@@ -64,6 +74,7 @@ _jTestCompileIfShould() {
     if [ "$J_DISABLE_OCCASIONAL_TESTING" = "1" ]; then
         return
     elif [ -f /tmp/java.j.occasionalTesting.compile ]; then
+        # checks if they've already done it once this session
         return
     else
         _jOccasionalTesting_compile
@@ -83,7 +94,7 @@ _jTestRunIfShould() {
 }
 
 _jOccasionalTesting_prefix() {
-    echo -e "\033[35;1m"
+    echo -e "\033[35;1m" # Escape code bright magenta
     echo "To disable occasional testing, add the following line to your \".profile\" file:"
     echo "  export J_DISABLE_OCCASSIONAL_TESTING=1"
     echo ""
@@ -95,7 +106,7 @@ _jOccasionalTesting_prefix() {
 }
 
 _jOccasionalTesting_suffix() {
-    echo -e "\033[0m"
+    echo -e "\033[0m" # Escape code reset
 }
 
 _jOccasionalTesting_compile() {
