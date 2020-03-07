@@ -7,7 +7,7 @@ j() {(
     buildDirectory=".build"
     shaFileExtention=".shasum"
 
-    if [ -n "$ZSH_VERSION" ]; then;
+    if [ -n "$ZSH_VERSION" ]; then
         # zsh inclues *.java files in **/*.java
         javaFiles=( $(echo **/*.java) )
     else
@@ -19,12 +19,12 @@ j() {(
     hashedFilesNames=()
     hashedFilesHashes=()
 
-
     # Loop through java files, filter for changed files using .shasum files
 
-    for javaFile in $javaFiles
+    for javaFile in "${javaFiles[@]}"
     do
-        # [ -f "$javaFile" ] || continue
+        [ -f "$javaFile" ] || continue
+        echo $javaFile
 
         shaSum=$(sha256sum $javaFile | cut -d " " -f 1)
         oldShaSum="$(cat "$buildDirectory/$javaFile$shaFileExtention" 2>/dev/null || echo "")"
@@ -44,12 +44,12 @@ j() {(
     else
         _jTestCompileIfShould
 
-        echo Compiling changed files: $toBeCompiled...
-        javac $toBeCompiled -d .build
+        echo Compiling changed files: ${toBeCompiled[@]}...
+        javac ${toBeCompiled[@]} -d .build
 
         # Update .shasum files
 
-        if [ -n "$ZSH_VERSION" ]; then;
+        if [ -n "$ZSH_VERSION" ]; then
             # zsh is done differently
             for i in $(seq 1 ${#hashedFilesHashes[@]})
             do
