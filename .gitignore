@@ -1,1 +1,4 @@
 .build
+
+# forSubmittion folders may contain private information (and weird formatting conventions)
+*--forSubmittion
