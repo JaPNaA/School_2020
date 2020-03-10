@@ -147,7 +147,11 @@ class TicTacToe {
     }
 
     private void print() {
-        String row = "       |       |       \n" + "   %s   |   %s   |   %s   \n" + "       |       |       \n";
+        String row =
+            "       |       |       \n" +
+            "   %s   |   %s   |   %s   \n" +
+            "       |       |       \n";
+
         String rowSeparator = "------------------------\n"; // one extra -, to match the specs, which are, slightly off
 
         System.out.printf("\n\n" + row + rowSeparator + row + rowSeparator + row,
