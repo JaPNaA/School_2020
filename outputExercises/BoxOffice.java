@@ -15,6 +15,7 @@ class BoxOffice {
         printRow("10", "Spy Kids: All the Time in the World", "2.5 M");
 
         System.out.println("\n... who knows how old these stats are...");
+        System.out.println("... 2011, apparently");
     }
 
     public static void printRow(String rank, String title, String gross) {
