@@ -1,5 +1,6 @@
 j() {(
-
+    if [ -n "$ZSH_VERSION" ]; then emulate -L ksh; fi
+    
     set -e
 
     currentDir=$(pwd)
