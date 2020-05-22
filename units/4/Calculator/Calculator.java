@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // Note: this program, including most other programs in the past, should produce the exact same output as the teacher's example outputs.
-// Inconsistant capitalization and bad spacing can all be blamed on the teacher. :)
+// Inconsistent capitalization and bad spacing can all be blamed on the teacher. :)
 
 class Calculator {
 
