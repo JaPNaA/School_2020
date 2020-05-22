@@ -14,11 +14,12 @@ Things I've made so I can be lazier
 
 ### Unit 3
 
-  - Module 1 Java Introduction: [hello](./hello)
+  - Module 1 Java Introduction: [hello](./hello/HelloWorld.java)
   - Module 2 Output Exercises: [outputExercises](./outputExercises)
     - [TicTacToe (overkill)](./outputExercises.ticTacToe)
     - [NLStandings](./outputExercises/NLStandings.java)
     - [BoxOffice](./outputExercises/BoxOffice.java)
+    - [Tester](./outputExercises/Tester.java)
   - Module 4 Variables
     - [Arithmetic](./Arithmetic/Arithmetic.java)
     - [SumNumbers](./Variables/SumNumbers.java)
