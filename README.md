@@ -14,24 +14,24 @@ Things I've made so I can be lazier
 
 ### Unit 3
 
-  - Module 1 Java Introduction: [hello](./hello/HelloWorld.java)
-  - Module 2 Output Exercises: [outputExercises](./outputExercises)
-    - [TicTacToe (overkill)](./outputExercises.ticTacToe)
-    - [NLStandings](./outputExercises/NLStandings.java)
-    - [BoxOffice](./outputExercises/BoxOffice.java)
-    - [Tester](./outputExercises/Tester.java)
+  - Module 1 Java Introduction: [hello](units/3/hello/HelloWorld.java)
+  - Module 2 Output Exercises: [outputExercises](units/3/outputExercises)
+    - [TicTacToe (overkill)](units/3/outputExercises.ticTacToe)
+    - [NLStandings](units/3/outputExercises/NLStandings.java)
+    - [BoxOffice](units/3/outputExercises/BoxOffice.java)
+    - [Tester](units/3/outputExercises/Tester.java)
   - Module 4 Variables
-    - [Arithmetic](./Arithmetic/Arithmetic.java)
-    - [SumNumbers](./Variables/SumNumbers.java)
+    - [Arithmetic](units/3/Arithmetic/Arithmetic.java)
+    - [SumNumbers](units/3/Variables/SumNumbers.java)
   - Module 7 Formatting Output
-    - [FormattingExercise](./FormattingExercise/FormattingExercise.java)
+    - [FormattingExercise](units/3/FormattingExercise/FormattingExercise.java)
   - Module 8 Input from the Keyboard
-    - [Cafeteria](./Cafeteria/Cafeteria.java)
+    - [Cafeteria](units/3/Cafeteria/Cafeteria.java)
 
 ### Unit 4
 
   - Unit 4 Methods
-    - [Calculator](./Calculator/Calculator.java)
+    - [Calculator](units/4/Calculator/Calculator.java)
 
 ## About...
 
