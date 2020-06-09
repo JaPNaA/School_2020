@@ -1,6 +1,6 @@
 j() {(
     if [ -n "$ZSH_VERSION" ]; then emulate -L ksh; fi
-    
+
     set -e
 
     currentDir=$(pwd)
@@ -74,8 +74,7 @@ j() {(
         echo --- Running ---
         echo ""
 
-        cd .build
-        java $filename
+        java -cp "${currentDir}/${buildDirectory}" $filename
         cd $currentDir
     else
         echo "Failed to compile"
